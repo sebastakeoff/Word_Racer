@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="637.0" prefWidth="800.0" styleClass="bodybg" stylesheets="@style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Word_Racer.FXMLDocumentController">
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <children>
+      <Button layoutX="371.0" layoutY="359.0" mnemonicParsing="false" text="TUTORIAL">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="373.0" layoutY="434.0" mnemonicParsing="false" text="CREDITOS">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="602.0" layoutY="516.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="150.0" style="-fx-background-color: #00FF00;" text="PLAY" textAlignment="CENTER">
+         <font>
+            <Font name="Gill Sans Ultra Bold" size="30.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
