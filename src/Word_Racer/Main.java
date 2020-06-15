@@ -9,6 +9,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 /**
@@ -24,7 +25,8 @@ public class Main extends Application {
         Scene scene = new Scene(root);
         
         stage.setScene(scene);
-        stage.setTitle("Word-Racer");
+        stage.setTitle("Word-Racer   V0.1");
+        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/img/launch.png")));
         stage.show();
     }
 
