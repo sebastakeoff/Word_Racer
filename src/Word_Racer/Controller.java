@@ -7,7 +7,6 @@ package Word_Racer;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.Duration;
 import java.util.ResourceBundle;
 import javafx.animation.Interpolator;
 import javafx.animation.KeyFrame;
@@ -20,11 +19,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
-import static javafx.util.Duration.seconds;
+import javafx.util.Duration;
 
 
 public class Controller implements Initializable {
@@ -54,8 +52,8 @@ public class Controller implements Initializable {
         
         Timeline timeline = new Timeline();
         KeyValue kv = new KeyValue(root.translateYProperty(), 0, Interpolator.EASE_IN);
-        KeyFrame kf = new KeyFrame(javafx.util.Duration.seconds(1));
-        boolean add = timeline.getKeyFrames().add(kf);
+        KeyFrame kf = new KeyFrame(Duration.seconds(1), kv);
+        timeline.getKeyFrames().add(kf);
         timeline.setOnFinished(event1 -> {
             
             parentContainer.getChildren().remove(anchorRoot);
