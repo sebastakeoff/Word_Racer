@@ -1,27 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Game_Play;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.animation.Animation;
+import javafx.animation.TranslateTransition;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.shape.Circle;
+import javafx.util.Duration;
 
-/**
- * FXML Controller class
- *
- * @author S7Z7
- */
+
 public class GamePlayController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Button btnStart;
+    @FXML
+    private Circle cir;
+    
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+       
+    
+    @FXML
+    public void countDownTimer(ActionEvent event){
+            
+        TranslateTransition transition = new TranslateTransition();
+        transition.setToX(300);
+        transition.setDuration(Duration.seconds(1));
+        transition.setAutoReverse(true);
+        transition.setCycleCount(Animation.INDEFINITE);
+        transition.setNode(cir);
+        transition.play();
+                  
+    }
     
 }
