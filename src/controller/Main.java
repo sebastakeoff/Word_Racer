@@ -1,5 +1,11 @@
-package Word_Racer;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package controller;
 
+import java.io.IOException;
 import model.Player;
 import java.util.Scanner;
 import javafx.application.Application;
@@ -8,6 +14,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 /**
@@ -18,14 +25,40 @@ public class Main extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/view/FXMLDocument.fxml"));
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(getClass().getResource("/view/FXMLDocument.fxml"));
+//        //Parent root = FXMLLoader.load(getClass().getResource("/view/FXMLDocument.fxml"));
+//        //loader.setController("/controller/Controller.java");
+//        
+//        Pane window = (Pane) loader.load();
+//        
+//        Scene scene = new Scene(window);
+//        
+//        stage.setScene(scene);
+//        stage.show();
         
-        Scene scene = new Scene(root);
         
-        stage.setScene(scene);
-        stage.setTitle("Word-Racer   V0.1");
-        stage.getIcons().add(new Image(Main.class.getResourceAsStream("/img/launch.png")));
-        stage.show();
+       try {
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(Main.class.getResource("/view/FXMLDocument.fxml"));
+            // Cargo la ventana
+            Pane ventana = (Pane) loader.load();
+ 
+            // Cargo el scene
+            Scene scene = new Scene(ventana);
+ 
+            // Seteo la scene y la muestro
+            stage.setScene(scene);
+            stage.setTitle("Word-Racer   V0.1");
+            stage.getIcons().add(new Image(Main.class.getResourceAsStream("/img/launch.png")));
+            stage.show();
+        } catch (IOException e) {
+            System.out.println(e.getMessage());
+        }
+         
+        
+        
+        
     }
 
     /**

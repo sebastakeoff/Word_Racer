@@ -1,4 +1,4 @@
-package Word_Racer;
+package model;
 
 /**
  * @author Grupo 11 - Paradigmas de programación
@@ -23,13 +23,16 @@ public class WordRacer {
     
     /**
      * Método para insertar las palabras ingresadas por el jugador
-     * @param w 
-     * @return void: solo añade la palabra en el arreglo
+     * @param w to add the word
      */
     public void addWord(String w) {
         insertedWords.add(w);
     }
     
+    /**
+     * Método para obtener las palabras ingresadas por los jugadores
+     * @return insterdeWords by players
+     */
     public ArrayList<String> getInsertedWords(){
         return insertedWords;
     }

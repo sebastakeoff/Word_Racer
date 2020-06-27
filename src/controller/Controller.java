@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Word_Racer;
+package controller;
 
-import Tutorial.TutorialController;
+import controller.TutorialController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +20,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
@@ -37,6 +38,10 @@ public class Controller implements Initializable {
     private AnchorPane anchorRoot;
     @FXML
     private StackPane parentContainer;
+    @FXML
+    private Button btnCred;
+    @FXML
+    private Label lblPy1;
   
     
     @Override
@@ -47,7 +52,7 @@ public class Controller implements Initializable {
     @FXML
     private void loadGamePlay(ActionEvent event) throws IOException {
         
-        Parent root = FXMLLoader.load(getClass().getResource("/Game_Play/GamePlay.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/view/GamePlay.fxml"));
         Scene scene = btnPlay.getScene();
         
         root.translateYProperty().set(scene.getHeight());
@@ -69,7 +74,7 @@ public class Controller implements Initializable {
     @FXML
     private void loadTuto(ActionEvent eventt) throws IOException {
         
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tutorial/Tutorial.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/Tutorial.fxml"));
 
         //TutorialController controltuto = loader.getController();
         //Scene scene = btnTuto.getScene();

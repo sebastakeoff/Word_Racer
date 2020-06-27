@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Tutorial;
+package controller;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -20,6 +20,8 @@ public class TutorialController implements Initializable {
     
     @FXML
     public Label lblTt;
+    @FXML
+    private Label lblTt1;
 
     /**
      * Initializes the controller class.

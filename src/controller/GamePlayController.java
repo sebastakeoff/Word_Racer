@@ -1,7 +1,7 @@
 
-package Game_Play;
+package controller;
 
-import Word_Racer.Time;
+import model.Time;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.Animation;

@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Word_Racer.Controller">
+<StackPane fx:id="parentContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <children>
       <AnchorPane id="AnchorPane" fx:id="anchorRoot" prefHeight="637.0" prefWidth="800.0" styleClass="bodybg" stylesheets="@style.css">
          <opaqueInsets>
@@ -37,7 +37,7 @@
                   <Font name="Gill Sans Ultra Bold Condensed" size="22.0" />
                </font>
             </Label>
-            <Label fx:id="lblPy1" layoutX="213.0" layoutY="385.0" text="Player 2">
+            <Label fx:id="lblPy2" layoutX="213.0" layoutY="385.0" text="Player 2">
                <font>
                   <Font name="Gill Sans Ultra Bold Condensed" size="22.0" />
                </font>

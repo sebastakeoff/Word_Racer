@@ -1,5 +1,5 @@
-package Word_Racer;
-import Game_Play.GamePlayController;
+package model;
+import controller.GamePlayController;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.util.Duration;

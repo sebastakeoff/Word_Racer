@@ -1,4 +1,4 @@
-package Word_Racer;
+package model;
 
 /**
  * Clase de jugadores. Asigna nombre y los puntos a los jugadores
@@ -10,11 +10,15 @@ public class Player {
     
     private String name;
     private int points;
+
+    /**
+     *
+     */
     public WordRacer game;
     
     /**
      * Constructor: Asigna el nombre al jugador e inicializa los puntos en 0
-     * @param n 
+     * @param n String - Players Name
      */
     public Player(String n) {
         name = n;

@@ -1,4 +1,4 @@
-package Word_Racer;
+package model;
 
 /**
  * @author   Grupo 11 - Paradigmas de programación
@@ -42,7 +42,7 @@ public class Word {
     
     /**
      * Método que busca si la palabra ingresada esté en el diccionario
-     * @param inWord
+     * @param inWord - La plabra a buscar
      * @return true si encuentra la palabra, falso de lo contrario
      */
     public boolean searchWord(String inWord) {
