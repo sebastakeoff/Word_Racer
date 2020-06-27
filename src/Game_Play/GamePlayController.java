@@ -1,6 +1,7 @@
 
 package Game_Play;
 
+import Word_Racer.Time;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.animation.Animation;
@@ -9,6 +10,8 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.shape.Circle;
 import javafx.util.Duration;
 
@@ -18,8 +21,11 @@ public class GamePlayController implements Initializable {
     @FXML
     private Button btnStart;
     @FXML
+    public Label tmr;
+    @FXML
     private Circle cir;
-    
+    @FXML
+    private AnchorPane anchorGame;
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -37,6 +43,10 @@ public class GamePlayController implements Initializable {
         transition.setCycleCount(Animation.INDEFINITE);
         transition.setNode(cir);
         transition.play();
+        
+        Time timer = new Time();
+        
+          
                   
     }
     

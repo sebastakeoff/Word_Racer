@@ -5,6 +5,7 @@
  */
 package Word_Racer;
 
+import Tutorial.TutorialController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -22,6 +23,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
@@ -44,6 +46,7 @@ public class Controller implements Initializable {
 
     @FXML
     private void loadGamePlay(ActionEvent event) throws IOException {
+        
         Parent root = FXMLLoader.load(getClass().getResource("/Game_Play/GamePlay.fxml"));
         Scene scene = btnPlay.getScene();
         
@@ -59,6 +62,24 @@ public class Controller implements Initializable {
             parentContainer.getChildren().remove(anchorRoot);
         });
         timeline.play();
+        
+    }
+    
+    
+    @FXML
+    private void loadTuto(ActionEvent eventt) throws IOException {
+        
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/Tutorial/Tutorial.fxml"));
+
+        //TutorialController controltuto = loader.getController();
+        //Scene scene = btnTuto.getScene();
+        
+        Parent root1 = (Parent) loader.load();
+        
+        Stage stage = new Stage();
+        stage.setTitle("Tutorial");
+        stage.setScene(new Scene(root1));
+        stage.show();
         
     }
     

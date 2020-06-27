@@ -15,7 +15,7 @@
             <Insets />
          </opaqueInsets>
          <children>
-            <Button fx:id="btnTuto" layoutX="361.0" layoutY="233.0" mnemonicParsing="false" text="TUTORIAL">
+            <Button fx:id="btnTuto" layoutX="361.0" layoutY="233.0" mnemonicParsing="false" onAction="#loadTuto" text="TUTORIAL">
                <font>
                   <Font name="Gill Sans Ultra Bold" size="18.0" />
                </font>
